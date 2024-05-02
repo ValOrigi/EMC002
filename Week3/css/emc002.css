@@ -1,0 +1,95 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box;
+    }
+
+    [class*="col-"] {
+        float:left;
+        padding: 15px;
+    }
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+    body {
+        [class*="col-"] {
+            width: 100%;
+        }
+    }
+}
+
+/* Table */
+th,td{
+    border: 1px solid;
+}
+
+/* H1 Format */
+h1 {
+    text-align: center;
+    background-color:seagreen;
+    color:white;
+    padding: 25px;
+}
+
+/* Center Element */
+.center {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+/* White Text */
+.whiteText{
+    color: white;
+}
+
+/* Teal Background */
+.tealBG{ 
+    background-color: seagreen;
+}
+
+/* Format Links BG */
+.buttonClass {
+    text-align: center;
+    background-color:seagreen;
+    color:white;
+    padding: 5px;
+}
+
+/* Footer */
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: seagreen;
+   color: white;
+   text-align: center;
+}
+
+/* Link Text Color */
+a:link
+{
+    color:#FFFFFF;
+}
+
+a:visited
+{
+    color:#FFFFFF;
+}
+
+a:hover 
+{
+    color:#FFFFFF;
+}
