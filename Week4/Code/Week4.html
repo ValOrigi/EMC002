@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Activty 3</h2>
+
+<!-- 1. CONTENT -->
+<p id="contChange">Change Content</p>
+<button type="button" onclick='document.getElementById("contChange").innerHTML = "Content Changed"'>Content</button>
+
+<!-- 2. FONT -->
+<p id="font">Change Font Style</p>
+<button type="button" onclick="document.getElementById('font').style.fontStyle='italic', document.getElementById('font').style.fontSize='50px'">Font Style</button>
+
+<!-- 3. IMAGE -->
+<br>
+<img id="imgChange" src="../Images/Dad.webp" width="100px">
+<button type="button" onclick='document.getElementById("imgChange").src= "../Images/Dance.gif"'>Image</button>
+
+<!-- 4. HIDE -->
+<br>
+<p id="shown">Hide me</p>
+<button type="button" onclick="document.getElementById('shown').style.display='none'">Hide</button>
+
+<!-- 5. SHOW -->
+<br>
+<p id="hidden" style="display:none;">I am now shown</p>
+<button type="button" onclick="document.getElementById('hidden').style.display='block'">Show</button>
+<!-- 6. CONSOLE -->
+<br>
+<p id="console"> Console Button</p>
+<button onclick="consFunct()">Console</button>
+<!-- 7. ALERT -->
+<br>
+<p id="alert"> Alert Button</p>
+<button onclick="alertFunct()">Alert</button>
+<!-- 8. x**y -->
+<br>
+<p> Exponetiate Button</p>
+<p id="expo"> x ^ y</p>
+<button onclick="expoFunct()">Exponetiate</button>
+
+<script>
+function consFunct()
+{
+    console.log("Hello World");
+}
+
+function alertFunct()
+{
+    window.alert("Welcome to CIIT");
+}    
+
+function expoFunct()
+{
+    let x = 5, y = 3, z;
+    z = x ** y;
+    document.getElementById("expo").innerHTML = z;
+}
+</script>
+
+</body>
+</html>
