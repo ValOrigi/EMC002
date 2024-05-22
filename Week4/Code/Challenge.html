@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<!-- header -->
 <h2>JavaScript if .. else</h2>
 
+<label for="myNumber">Input Number: </label>
+<!-- text box input with the id "myNumber" -->
 <input type="number" id="myNumber">
-<button onclick="identifyConstOrPrime(myNumber)">Submit</button>
+<!-- submit button to push the value in the text box -->
+<button onclick="identifyConstOrPrime()">Submit</button>
 
+<!-- 
+  set the location for the code to ouput whatever type of value
+  the number in the textbox is
+-->
 <br>
 <p id="ident"></p>
 
-<script>
-function identifyConstOrPrime(x)
-{
-var number = x;
-let answer;
-if (number <= 1) {
-  answer = "Neither";
-} else if ((number % 2) !== 0 || number === 2) {
-  answer = "Prime";
-} else {
-  answer = "Composite";
-}
-document.getElementById("ident").innerHTML = answer;
-}
 
+<script>
+// script for clicking the button to know whether its a prime 
+// or composite number
+function identifyConstOrPrime()
+{
+  var number = document.getElementById("myNumber").value;
+  let answer, ansCount = 0;
+  /*  
+      - if number is 1 or below it it is neither
+      - if number is divisible by 2 then it is composite
+      - if it is not then it is prime
+      - 2 is the only composite number that is even
+  */
+  if (number <= 1)
+  {
+    answer = "Neither";
+  } 
+  else if (number == 2)
+  {
+    answer = "Prime";
+  }
+  else
+  {
+    for (let count = 1; count <= number; count++)
+    {
+      if (number % count == 0)
+      {
+        ansCount++;
+      } 
+    }
+
+    if(ansCount > 2)
+    {
+      answer = "Composite";
+    }
+    else
+    {
+      answer = "Prime";
+    }
+  }
+
+  //change whatever has the id of "ident" to the answer
+  document.getElementById("ident").innerHTML = answer;
+}
 </script>
 
 </body>
