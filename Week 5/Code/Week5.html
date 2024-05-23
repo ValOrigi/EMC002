@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- header -->
+<h2>Activity 4</h2>
+
+<label for="myNumber">Input Number: </label>
+<!-- text box input with the id "myNumber" -->
+<input type="number" id="myNumber"> <br><br>
+<!-- submit button to push the value in the text box -->
+<button onclick="identifyOddOrEven()">Submit</button> <br><br>
+<p id="ident"></p>
+
+<label for="height">Input Height: </label>
+<input type="number" id="height"> <br><br>
+<label for="weight">Input Weigth: </label>
+<input type="number" id="weight"> <br><br>
+<!-- submit button to push the value in the text box -->
+<button onclick="BMI()">Submit</button>
+<p id="BMI"></p>
+
+<label for="alertNothing">Input anything: </label>
+<input id="alertNothing"> <br><br>
+<!-- submit button to push the value in the text box -->
+<button onclick="alertIfNothing()">Submit</button> <br><br>
+<p id="alertIf"></p>
+
+<label for="diamond">Input anything: </label>
+<input id="diamond"> <br><br>
+<!-- submit button to push the value in the text box -->
+<button onclick="loopDiamond()">Submit</button> <br><br>
+<p id="diamondLoop"></p>
+
+<script>
+function identifyOddOrEven()
+{
+  var number = document.getElementById("myNumber").value;
+  let answer;
+
+  if(number % 2 == 0)
+  {
+    answer = "Even";
+  }
+  else
+  {
+    answer = "Odd";
+  }
+
+  //change whatever has the id of "ident" to the answer
+  document.getElementById("ident").innerHTML = answer;
+}
+
+function BMI()
+{
+  var weight = document.getElementById("weight").value, height = document.getElementById("height").value;
+  let bmi = (weight / (height**2)), classBMI;
+  if (bmi < 18.5)
+  {
+    classBMI = "Underweight";
+  }
+  else if (18.5 < bmi && bmi <= 24.9)
+  {
+    classBMI = "Normal Weight";
+  }
+  else if (24.9 < bmi && bmi <= 29.9)
+  {
+    classBMI = "Overweight"
+  }
+  else if (29.9 < bmi)
+  {
+    classBMI = "Obesity"
+  }
+  document.getElementById("BMI").innerHTML = classBMI;
+}
+
+function alertIfNothing()
+{
+  let value = document.getElementById("alertNothing").value
+  if(value != "")
+  {
+    window.alert(value);
+  }
+  else
+  {
+    window.alert("Please Input Value in the Box");
+  }
+}
+
+</script>
+
+</body>
+</html>
