@@ -1,0 +1,82 @@
+<!DOCtype html>
+    <head>
+        <!-- important -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/website.css">
+    </head>
+    <body>
+        <div class="screen hideScroll">
+            <div class="sidebar center">
+                <a><img src="..\Images\Logo.png" width="100%" height="20%"></a>
+                <p class="homeButton" ><a href="01-HomePage.html" style="text-decoration:none">Home</a></p>
+                <p class="homeButton"><a href="02-CataloguePage.html" style="text-decoration:none">Catalogue</a></p>
+                <p class="homeButton"><a href="03-AboutUsPage.html" style="text-decoration:none">About Us</a></p>
+                <p class="homeButton"><a href="04-ProfilePage.html" style="text-decoration:none">Profile</a></p>
+                <!-- <div class="sidebarFooter">
+                    <button type="button">Button</button>
+                </div> -->
+            </div> 
+            
+        <div id="homeDiv" class="screenDiv">
+            <div class="homeDivs home">
+                <!-- <div class="homeInteract border">
+                    CACKLE
+                </div>  -->
+            </div>
+
+            <div id="catalogueDiv" class="screenDiv">
+                <div class="homeDivs catalogue">
+                    <div class="catalogueInteract center">
+                        <p class="navHomeButton" ><a href="02-CataloguePage.html" style="text-decoration:none; font-size: 2.5em;">BROWSE NOW!</a></p>
+                    </div>
+                </div>
+                <div id="aboutDiv" class="screenDiv">
+                    <div class="homeDivs about">
+                        <div class="aboutInteract center">
+                            PICS
+                        </div>
+                    </div>
+            
+                    <div id="profileDiv" class="screenDiv">
+                        <div class="homeDivs profile">
+                            <div class="profileInteract center">
+                                <p class="navHomeButton" ><a href="04-ProfilePage.html" style="text-decoration:none; font-size: 2.5em;">LOGIN</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <!-- anchor links -->
+        <div class="footer">
+            <ul class="breadcrumb">
+                <li><a href="#homeDiv">Home</a></li>
+                <li><a href="#catalogueDiv">Catalogue</a></li>
+                <li><a href="#aboutDiv">About Us</a></li>
+                <li><a href="#profileDiv">Profile</a></li>
+            </ul>
+
+            <!-- <p class="homeButton"><a href="#homeDiv">Home</a></p>
+            <p class="homeButton"><a href="#catalogueDiv">Catalogue</a></p>
+            <p class="homeButton"><a href="#aboutDiv">About Us</a></p>
+            <p class="homeButton"><a href="#profileDiv">Profile</a></p> -->
+        </div>
+    </body>
+
+    <script>
+
+        // scroll horizontally
+        const target = document.querySelector('div')
+
+        target.addEventListener('wheel', event => {
+        const toLeft  = event.deltaY < 0 && target.scrollLeft > 0
+        const toRight = event.deltaY > 0 && target.scrollLeft < target.scrollWidth - target.clientWidth
+
+        if (toLeft || toRight) {
+            event.preventDefault()
+            target.scrollLeft += event.deltaY
+        }
+        })
+    </script>
+</html>
