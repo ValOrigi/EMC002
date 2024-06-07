@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/website.css">
-    <h1>CATALOGUE</h1>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../Images/Icon.png">
+  <link rel="stylesheet" href="../css/website.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/catalogue.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <p class="homeButton" ><a href="01-HomePage.html" style="text-decoration:none">Home</a></p>
+<body style="background-color: #0f151a;">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header" style="margin-top: 1em;">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <a class="navbar-brand prevent-select"><img class="prevent-select" src="..\Images\Icon.png" width="50em" height="50em"></a>
+      <ul class="nav navbar-nav">
+        <li class=" navbarTab"><a class="navbarFont" style="color:#dee2e2" href="01-HomePage.html">Home</a></li>
+        <li class="navbarTab"><a class="navbarFont" style="color:#dee2e2" href="02-CataloguePage.html">Catalogue</a></li>
+        <li class="navbarTab"><a class="navbarFont" style="color:#dee2e2" href="03-AboutUsPage.html">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="navbarTab"><a class="navbarFont" style="color:#dee2e2" href="04-ProfilePage.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="navbarTab"><a class="navbarFont" style="color:#dee2e2" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div>
+    <h1 class="center" style="font-size: 4em;">BROWSE THE SHOP</h1>
+</div><br>
+
+<div class="col-sm-2">
+
+</div>
+<div class="col-sm-8">
+    <div class="container">    
+    <div class="row">
+        <div class="col-sm-4">
+        <div class="panel panel-primary" style="border-width: 0px;">
+            <div class="panel-heading center" style="background-color: #658478;">Artpiece 1</div>
+            <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/1.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+            <div class="panel-footer center" style="background-color: #20272f;">Art Print of Cackle Cybercity</div>
+        </div>
+        </div>
+        <div class="col-sm-4"> 
+            <div class="panel panel-primary" style="border-width: 0px;">
+                <div class="panel-heading center" style="background-color: #658478;">Artpiece 2</div>
+                <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/2.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+                <div class="panel-footer center" style="background-color: #20272f;">Art Print of Cackle Cybercity</div>
+            </div>
+        </div>
+        <div class="col-sm-4"> 
+            <div class="panel panel-primary" style="border-width: 0px;">
+                <div class="panel-heading center" style="background-color: #658478;">Artpiece 3</div>
+                <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/3.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+                <div class="panel-footer center" style="background-color: #20272f;">Art Print of Cackle Cybercity</div>
+            </div>
+        <!-- <div class="col-sm-4"> 
+        <div class="panel panel-danger">
+            <div class="panel-heading">BLACK FRIDAY DEAL</div>
+            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        </div>
+        </div>
+        <div class="col-sm-4"> 
+        <div class="panel panel-success">
+            <div class="panel-heading">BLACK FRIDAY DEAL</div>
+            <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        </div> -->
+        </div>
+    </div>
+    </div><br>
+
+    <div class="container">    
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-primary" style="border-width: 0px;">
+                <div class="panel-heading center" style="background-color: #658478;">Background Work 1</div>
+                <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/ex1.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+                <div class="panel-footer center" style="background-color: #20272f;">Art Print of Digital Deception</div>
+            </div>
+        </div>
+        <div class="col-sm-4"> 
+            <div class="panel panel-primary" style="border-width: 0px;">
+                <div class="panel-heading center" style="background-color: #658478;">Background Work 2</div>
+                <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/ex2.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+                <div class="panel-footer center" style="background-color: #20272f;">Art Print of Digital Deception</div>
+            </div>
+        </div>
+        <div class="col-sm-4"> 
+            <div class="panel panel-primary" style="border-width: 0px;">
+                <div class="panel-heading center" style="background-color: #658478;">Background Work 3</div>
+                <div class="panel-body" style="background-color: #cdcdc2;"><img src="../Images/ex3.png" class="img-responsive" style="width:100%; border-radius: 15px;" alt="Image"></div>
+                <div class="panel-footer center" style="background-color: #20272f;">Art Print of Digital Deception</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="col-sm-2">
+
+</div>
+
+<div class="col-sm-12">
+    <footer style="width: 100%;">
+      <div class="container center">
+          <ul class="navFoot">
+              <li><a href="01-HomePage.html">Home</a></li>|
+              <li><a href="04-ProfilePage.html">Profile</a></li>|
+              <li><a href="02-CataloguePage.html">Catalogue</a></li>|
+              <li><a href="03-AboutUsPage.html">About</a></li>|
+              <li><a href="#my-modal" data-toggle="modal">Contact Us</a></li>
+          </ul>
+      </div>
+        <p class="copy"> Copyright 2024 </p>
+    </footer>
+  </div>
+  
+  <div id="my-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="background-color: #0f151a; padding: 1em;">
+        <h1 class="center">Send us a report!</h1><br>
+        <form>
+          <div class="form-group">
+            Email Address
+            <input type="email" class="form-control" id="emailRepor" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            Report Subject
+            <textarea class="form-control" style="color: black; padding: auto;" id="subj" rows="1"></textarea>
+          </div>
+          <div class="form-group">
+            Example Text Area
+            <textarea class="form-control" style="color: black;" id="reportDesc" rows="5"></textarea>
+          </div>
+          <div class="center">
+            <button class="homeButton" onclick="submitReport()">Submit Report</button>
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

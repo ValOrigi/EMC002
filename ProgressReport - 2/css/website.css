@@ -83,12 +83,12 @@ html, body {
 }
 
 .about {
-  background-image: url("../Images/2.jpg");
+  background-image: url("../Images/2.png");
   background-color: #3a5367;
 }
 
 .profile {
-  background-image: url("../Images/3.jpg");
+  background-image: url("../Images/3.png");
 }
 
 /* Center Element */
@@ -108,19 +108,17 @@ html, body {
   text-align: center;
 }
 
-.sidebarFooter {
-  position:absolute;
-  left: 0;
-  bottom: 35px;
-  width: 100%;
-  text-align: center;
+hr.solid {
+  margin: 2vw;
+  border-top: 3px solid #dee2e2;
 }
 
 .homeButton {
+  border-radius: 15px;
   text-align: center;
   background-color:#658478;
   color:#dee2e2;
-  margin-top: 1vw;
+  margin-top: 1em;
   padding: 5px;
 }
 
@@ -131,24 +129,8 @@ html, body {
   padding: 5px;
 }
 
-.homeInteract {
-  position: relative;
-  top: 1em;
-  left: 1em;
-  text-align: center;
-  height: 20%;
-  width: 35%;
-  background-color: rgb(32, 39, 47, .25);
-  rotate: -20deg;
-  font-size: 15vh;
-  border-style: dotted;
-  border-width: 5px;
-  background: linear-gradient(#1e262d,#35414c) padding-box,
-   linear-gradient(#d230a7 50%, #9f91ac 50%) border-box;
-   box-shadow: 0 0 2em .5em #d230a7;
-}
-
 .catalogueInteract {
+  border-radius: 15px;
   position:relative;
   top: 7em;
   text-align: center;
@@ -161,6 +143,7 @@ html, body {
 }
 
 .aboutInteract {
+  border-radius: 15px;
   position:relative;
   top: 2.25em;
   right: 9em;
@@ -174,6 +157,7 @@ html, body {
 }
 
 .profileInteract {
+  border-radius: 15px;
   position:relative;
   top: 6em;
   right: 8em;
@@ -219,26 +203,23 @@ ul.breadcrumb li a:hover {
   color: #658478;
 }
 
-
-.header {
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 10%;
-  width: 90%;
-  background-color:  #0f151a;
-}
-
 .logo {
   position: fixed;
   left: 1%;
   top: 1%;
 }
 
-.homeButton {
+.navButtons {
   text-align: center;
   background-color:#658478;
   color:#dee2e2;
   margin-top: 1vw;
   padding: 5px;
+  margin-left: 100px;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
