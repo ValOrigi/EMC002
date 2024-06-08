@@ -8,9 +8,11 @@ https://www.sliderrevolution.com/resources/bootstrap-login-form/
     margin: 0px auto;
     padding: 0px;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
+    font-family: Blippo, fantasy;
+    letter-spacing: 1px;
   }
-  
+
+
   .cotn_principal {
     position: absolute;
     width: 100%;
