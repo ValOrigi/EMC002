@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+    outline: none;
+    border: 0px;
+    border-width: 0px;
+    font-family: Blippo, fantasy;
+    font-size: 3vh;
+    color: #dee2e2;
+    letter-spacing: 1px;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0px;
+    border-width: 0px;
+    background-color: #20272f;
+}
+
+.navbarTab {
+    margin-top: .5em;
+}
+
+.navbarFont {
+    font-size: 1.5em;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+  
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #dee2e2;
+    height: 100%;
+}
+  
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;} 
+}
+
+.labelReport {
+    padding: 2.5px;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 75px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: #dee2e2;
+  }
+
+  
+.fa:hover {
+    opacity: 0.75;
+    text-decoration: none;
+    color: #dee2e2;
+}
+
+.fa-facebook {
+  background: #3B5998;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+}
+
+.fa-youtube {
+  background: #bb0000;
+}
+
+.fa-instagram {
+  background: #125688;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+}
