@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2024 at 08:54 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Jul 11, 2024 at 06:30 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,10 +44,10 @@ INSERT INTO `cart` (`order_id`, `user_id`, `item_id`, `quantity`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Table structure for table `productsbg`
 --
 
-CREATE TABLE `products` (
+CREATE TABLE `productsbg` (
   `item_id` int(255) NOT NULL,
   `itemname` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
@@ -57,10 +57,62 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `products`
+-- Dumping data for table `productsbg`
 --
 
-INSERT INTO `products` (`item_id`, `itemname`, `description`, `price`, `quantity`, `img`) VALUES
+INSERT INTO `productsbg` (`item_id`, `itemname`, `description`, `price`, `quantity`, `img`) VALUES
+(1, 'Background Work', 'Art Print of Digital Deception', 120, 10, '../Images/ex1.png'),
+(2, 'Background Work', 'Art Print of Digital Deception', 110, 15, '../Images/ex2.png'),
+(3, 'Background Work', 'Art Print of Digital Deception', 150, 11, '../Images/ex3.png'),
+(4, 'Background Work', 'Art Print of Digital Deception', 150, 14, '../Images/ex1.png'),
+(5, 'Background Work', 'Art Print of Digital Deception', 110, 10, '../Images/ex1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `productslandscape`
+--
+
+CREATE TABLE `productslandscape` (
+  `item_id` int(255) NOT NULL,
+  `itemname` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `price` int(255) NOT NULL,
+  `quantity` int(255) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `productslandscape`
+--
+
+INSERT INTO `productslandscape` (`item_id`, `itemname`, `description`, `price`, `quantity`, `img`) VALUES
+(1, 'Background Work', 'Art Print of Digital Deception', 120, 10, '../Images/ex1.png'),
+(2, 'Background Work', 'Art Print of Digital Deception', 110, 15, '../Images/ex1.png'),
+(3, 'Background Work', 'Art Print of Digital Deception', 150, 11, '../Images/ex1.png'),
+(4, 'Background Work', 'Art Print of Digital Deception', 150, 14, '../Images/ex1.png'),
+(5, 'Background Work', 'Art Print of Digital Deception', 110, 10, '../Images/ex1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `productsportrait`
+--
+
+CREATE TABLE `productsportrait` (
+  `item_id` int(255) NOT NULL,
+  `itemname` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `price` int(255) NOT NULL,
+  `quantity` int(255) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `productsportrait`
+--
+
+INSERT INTO `productsportrait` (`item_id`, `itemname`, `description`, `price`, `quantity`, `img`) VALUES
 (1, 'Background Work', 'Art Print of Digital Deception', 120, 10, '../Images/ex1.png'),
 (2, 'Background Work', 'Art Print of Digital Deception', 110, 15, '../Images/ex1.png'),
 (3, 'Background Work', 'Art Print of Digital Deception', 150, 11, '../Images/ex1.png'),
@@ -88,7 +140,8 @@ INSERT INTO `profile` (`user_id`, `username`, `email`, `password`) VALUES
 (1, 'Valion', 'val@gmail.com', 'PassWord0!'),
 (21, 'NotValion', 'notvalion@gmail.com', 'Valion1!'),
 (22, '123456', '123@gmail.com', '11123Abc!'),
-(23, 'HelloWorld', 'HelloWorld@gmail.com', 'HelloWorld1!');
+(23, 'HelloWorld', 'HelloWorld@gmail.com', 'HelloWorld1!'),
+(24, 'Cranes', 'cranes@email.com', 'Jihoon96!');
 
 --
 -- Indexes for dumped tables
@@ -103,9 +156,23 @@ ALTER TABLE `cart`
   ADD KEY `cart_ibfk_2` (`user_id`);
 
 --
--- Indexes for table `products`
+-- Indexes for table `productsbg`
 --
-ALTER TABLE `products`
+ALTER TABLE `productsbg`
+  ADD PRIMARY KEY (`item_id`),
+  ADD KEY `item_id` (`item_id`);
+
+--
+-- Indexes for table `productslandscape`
+--
+ALTER TABLE `productslandscape`
+  ADD PRIMARY KEY (`item_id`),
+  ADD KEY `item_id` (`item_id`);
+
+--
+-- Indexes for table `productsportrait`
+--
+ALTER TABLE `productsportrait`
   ADD PRIMARY KEY (`item_id`),
   ADD KEY `item_id` (`item_id`);
 
@@ -128,16 +195,28 @@ ALTER TABLE `cart`
   MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT for table `productsbg`
 --
-ALTER TABLE `products`
+ALTER TABLE `productsbg`
   MODIFY `item_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `productslandscape`
+--
+ALTER TABLE `productslandscape`
+  MODIFY `item_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `productsportrait`
+--
+ALTER TABLE `productsportrait`
+  MODIFY `item_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
@@ -147,7 +226,7 @@ ALTER TABLE `profile`
 -- Constraints for table `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `products` (`item_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `productsbg` (`item_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `profile` (`user_id`) ON DELETE CASCADE;
 COMMIT;
 
