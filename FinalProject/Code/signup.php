@@ -1,4 +1,6 @@
 <?php
+    session_start ();
+    
       $con = mysqli_connect('localhost', 'root', '','cackle');
 
       if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -7,6 +9,8 @@
         $username = $_POST['userSignUp'];
         $email = $_POST['emailSignUp'];
         $password = $_POST['passSignUp'];      
+
+        $hash = password_hash($password, PASSWORD_DEFAULT); 
 
         $sql = "SELECT * FROM `profile` WHERE `email` = '$email'"; 
         $resultEmail = $con->query($sql); 
@@ -26,7 +30,7 @@
         else 
         { 
             // database insert SQL code
-            $sql = "INSERT INTO `profile` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password')";
+            $sql = "INSERT INTO `profile` (`username`, `email`, `password`) VALUES ('$username', '$email', '$hash')";
             
             // insert in database 
             $rs = mysqli_query($con, $sql);
