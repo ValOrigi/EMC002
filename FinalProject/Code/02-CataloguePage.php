@@ -84,10 +84,13 @@
             echo '<h5 class="card-title center" style="background-color: #3d7241; border-radius: .5em; font-size: 1em; box-shadow: 0 -.15em 3px .05em rgb(15, 21, 26, 75%) inset;"> <strong>' . $row["itemname"] .'</strong></h5>';
             echo '<img src="'.$row["img"]. '" class="card-img-top" style="width:100%; height:100%; object-position: 100% 20%; object-fit:cover; max-height: 7em; border-radius: .5em; margin: 0.5em 0" alt="Art Piece" />';
               echo '<div class="card-body">';
-                echo '<p class="card-text center" style="background-color: #20272f; height: 250px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
+                echo '<p class="card-text center" style="background-color: #20272f; height: 150px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
                 echo '<p class="qty center" style="background-color: #20272f; border-bottom-right-radius: .5em; border-bottom-left-radius: .5em; font-size: 1.25em;">PHP '. $row["price"] .'</p>';
-                echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
-                echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                if(isset($_SESSION["login"]))
+                    {
+                      echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
+                      echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                    }
               echo '</div>';
             echo '</div>';
           echo '</div>';
@@ -125,10 +128,13 @@
             echo '<h5 class="card-title center" style="background-color: #3d7241; border-radius: .5em; font-size: 1em; box-shadow: 0 -.15em 3px .05em rgb(15, 21, 26, 75%) inset;"> <strong>' . $row["itemname"] .'</strong></h5>';
             echo '<img src="'.$row["img"]. '" class="card-img-top" style="width:100%; height:100%; object-position: 100% 20%; object-fit:cover; max-height: 7em; border-radius: .5em; margin: 0.5em 0" alt="Art Piece" />';
               echo '<div class="card-body">';
-                echo '<p class="card-text center" style="background-color: #20272f; height: 250px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
+                echo '<p class="card-text center" style="background-color: #20272f; height: 150px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
                 echo '<p class="qty center" style="background-color: #20272f; border-bottom-right-radius: .5em; border-bottom-left-radius: .5em; font-size: 1.25em;">PHP '. $row["price"] .'</p>';
-                echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
-                echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                if(isset($_SESSION["login"]))
+                    {
+                      echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
+                      echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                    }
               echo '</div>';
             echo '</div>';
           echo '</div>';
@@ -166,10 +172,13 @@
             echo '<h5 class="card-title center" style="background-color: #3d7241; border-radius: .5em; font-size: 1em; box-shadow: 0 -.15em 3px .05em rgb(15, 21, 26, 75%) inset;"> <strong>' . $row["itemname"] .'</strong></h5>';
             echo '<img src="'.$row["img"]. '" class="card-img-top" style="width:100%; height:100%; object-position: 100% 20%; object-fit:cover; max-height: 7em; border-radius: .5em; margin: 0.5em 0" alt="Art Piece" />';
               echo '<div class="card-body">';
-                echo '<p class="card-text center" style="background-color: #20272f; height: 250px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
+                echo '<p class="card-text center" style="background-color: #20272f; height: 150px; border-top-right-radius: .5em; border-top-left-radius: .5em;">'. $row["description"] .'</p>';
                 echo '<p class="qty center" style="background-color: #20272f; border-bottom-right-radius: .5em; border-bottom-left-radius: .5em; font-size: 1.25em;">PHP '. $row["price"] .'</p>';
-                echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
-                echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                    if(isset($_SESSION["login"]))
+                    {
+                      echo '<form class="center" method="post" action="addToCart.php">  <input type="hidden" id="itemId" name="itemId" value="'.$row["item_id"].'">';
+                      echo '<input type="submit" name="add" class="orderButton" style="margin: .5em 0; height: 2em; width: 100%;" value="Add to Cart"/> </form>';
+                    }
               echo '</div>';
             echo '</div>';
           echo '</div>';

@@ -162,7 +162,7 @@
         echo '</div>';
       } 
       else {
-        echo '<div class="center" style="background-color: #20272f; height: 3.5em; width: 30em; border-radius: .5em;"> <h1 class="center" style="font-size:1.5em;">Browse the Catalogue to order items!</h1></div>';
+        echo '<div class="center" style="background-color: #20272f; height: 20em; width: 30em; border-radius: .5em;"> <h1 class="center" style="font-size:3em;"><br>Nothing Here! <br>Browse the Catalogue to order items!</h1></div>';
       }
       $con->close();
       ?>   
