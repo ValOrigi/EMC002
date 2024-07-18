@@ -21,7 +21,7 @@
 	header("location:01-LoginScreen.php"); 
 ?>
 
-<body style="background-color: #0f151a; background-image: url('../Images/Catalogue.gif'); background-repeat: no-repeat; background-attachment: fixed;">
+<body class="mainBG">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header" style="margin-top: 1em;">
@@ -71,17 +71,17 @@
         echo '<div class="col-sm-1 center">';
         echo '</div>';
 
-        echo '<div class="col-sm-4 center" style="width:15em; background-color: #20272f; border-radius: .5em;">';
+        echo '<div class="col-sm-4 center" style="width:40%; background-color: #20272f; border-radius: .5em;">';
           echo '<img src="../Images/Icon.png" class="card-img-top" style="background-color: #0f151a; width:65%; height:65%; border-radius: 1000px; margin: 0.5em 0" alt="Default Icon" />';
           echo '<p style="letter-spacing: 2px; line-height: 150%;">Username: '. $row["username"] .'</p>';
           echo '<p style="letter-spacing: 2px; line-height: 150%;">Email: '. $row["email"] .'</p>';
           echo '<button class="homeButton" style="width: 10em; margin:.5em 0;">Change Password</button>';
         echo '</div>';
 
-        echo '<div class="col-sm-0 center">';
+        echo '<div class="col-sm-1 center">';
         echo '</div>';
 
-        echo '<div class="col-sm-4 center" style="width:20em; background-color: #20272f; border-radius: .5em; ">';
+        echo '<div class="col-sm-4 center" style="width: 40%; background-color: #20272f; border-radius: .5em; ">';
           echo '<p class="center" style="letter-spacing: 2px; line-height: 150%; font-size: 1.75em;">About You </p>';
           echo '<p style="center letter-spacing: 2px; line-height: 150%; margin-left:1em; width:10m;">'. $row["description"] .'</p>';
           echo '<button class="homeButton" style="width: 5em; margin:.5em 0;">Edit Bio</button>';

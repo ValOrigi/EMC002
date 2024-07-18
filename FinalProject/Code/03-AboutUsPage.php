@@ -19,7 +19,7 @@
   session_start ();
 ?>
 
-<body style="background-color: #0f151a; background-image: url('../Images/Catalogue.gif'); background-repeat: no-repeat; background-attachment: fixed;">
+<body class="mainBG">
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header" style="margin-top: 1em;">

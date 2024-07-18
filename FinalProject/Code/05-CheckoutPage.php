@@ -21,7 +21,7 @@
 	header("location:01-LoginScreen.php"); 
 ?>
 
-<body style="background-color: #0f151a; background-image: url('../Images/Catalogue.gif'); background-repeat: no-repeat; background-attachment: fixed;">
+<body class="mainBG">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header" style="margin-top: 1em;">
@@ -127,7 +127,7 @@
                     echo '<div class="col-md-1 d-flex justify-content-center">';
                     echo '<div>';
                       echo '<form method="post" action="removeFromCart.php">  <input type="hidden" id="orderId" name="orderId" value="'.$rowCart["order_id"].'">';
-                      echo '<input type="submit" name="delete" class="removeButton" style="height: 2em; width: 5em; margin: .75em 0 0 0;" value="Remove"/> </form>';
+                      echo '<input type="submit" name="delete" class="removeButton" style="height: 2em; width: 4em; margin: .75em 0 0 0;" value="Remove"/> </form>';
                     echo '</div>';
                   echo '</div>';
 

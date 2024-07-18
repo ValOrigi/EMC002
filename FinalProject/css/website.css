@@ -74,7 +74,7 @@
 }
 
 .home {
-  margin-left: 11.75vw;
+  margin-left: 11.75vh;
   background-image: url("../Images/Cackle Front Page.gif");
   background-color: #0f151a;
 }
@@ -101,7 +101,7 @@
   z-index: +999;
   left: 0px;
   height: 100%;
-  width: 11.5%;
+  width: 25vh;
   /* 
   height: 950px;
   width: 220px; 
@@ -210,6 +210,15 @@ hr.solid {
   background-color: #e60f0f;
 }
 
+.mainBG {
+  background-color: #0f151a; 
+  background-image: url('../Images/Catalogue.gif'); 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-size: cover; 
+  width: 100%; 
+  height: 100vh;
+}
 /* Footer */
 .footer {
   position: fixed;
